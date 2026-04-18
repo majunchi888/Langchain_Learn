@@ -1,0 +1,15 @@
+{
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 1,
+    "editor.insertSpaces": true,
+    "editor.suggestOnTriggerCharacters": true,
+    "python.analysis.indexing": true,
+    "python.languageServer": "Jedi",
+    "notebook.output.wordWrap": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "git.ignoreLimitWarning": true
+}
