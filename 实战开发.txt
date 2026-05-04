@@ -1,6 +1,41 @@
 1. uv add fastapi alibabacloud-oss-v2
 
 
+  app/
+  ├── main.py                    # FastAPI 入口，配置路由和静态文件
+  │
+  ├── agents/
+  │   └── personal_chief.py      # AI 代理核心逻辑
+  │ 
+  ├── api/
+  │   └── v1/
+  │       ├── chat.py             # 对话 API
+  │       │   ├── POST /chat/stream     流式对话
+  │       │   ├── GET  /chat/messages   获取历史
+  │       │   └── DELETE /chat/messages 清空历史
+  │       │
+  │       └── oss.py              # OSS 上传签名 URL
+  │
+  ├── models/
+  │   └── schemas.py              # Pydantic 数据模型，请求/响应数据结构定义  
+  │
+  ├── common/
+  │   └── logger.py               # 日志配置
+  │
+  └── static/                     # Next.js 编译产出的静态网页 
+      ├── index.html              # 前端入口
+      ├── _next/                  # Next.js 构建资源
+      └── ...                     # 其他静态资源
+
+
+ OSS配置
+# 阿里OSS
+OSS_ACCESS_KEY_ID
+OSS_ACCESS_KEY_SECRET
+OSS_BUCKET
+
+
+
 # langsmith调试部署
 # 1.配置langsmith 的密钥:
 #     LANGSMITH_
