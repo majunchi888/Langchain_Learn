@@ -4,7 +4,7 @@
     "editor.insertSpaces": true,
     "editor.suggestOnTriggerCharacters": true,
     "python.analysis.indexing": true,
-    "python.languageServer": "Jedi",
+    "python.languageServer": "None",
     "notebook.output.wordWrap": true,
     "editor.quickSuggestions": {
         "other": true,
