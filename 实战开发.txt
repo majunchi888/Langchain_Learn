@@ -1,1 +1,24 @@
 1. uv add fastapi alibabacloud-oss-v2
+
+
+# langsmith调试部署
+# 1.配置langsmith 的密钥:
+#     LANGSMITH_
+#     LANGSMITH_TRACING=true
+#     #项目名
+#     LANGSMITH_PROJECT=
+# 2.开发agent
+
+# 3.本地部署：
+#     uv add langgraph-cli[inmem]
+#     添加langgraph.json 文件：{
+#                               "dependencies": ["."],
+#                               "graph": {
+#                                 "cheif_agent": "./app/agents/personal_chief.py:agent"
+#                               },
+#                               "env": ".env"
+#                             }
+#    uv run langgraph dev                         
+
+
+#    ！！主要用来调试，不用来部署！！
